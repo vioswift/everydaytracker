@@ -44,14 +44,15 @@ public class Window {
     }
 
     public void add_menu() {
+        Actions actions = new Actions(this);
         menu = new JMenu("File");
         mi_open = new JMenuItem("Open");
         mi_new = new JMenuItem("New");
         mi_exit = new JMenuItem("Exit");
 
-        mi_open.addActionListener(new Actions().mi_open);
-        mi_new.addActionListener(new Actions().mi_new);
-        mi_exit.addActionListener(new Actions().mi_exit);
+        mi_open.addActionListener(actions.mi_open);
+        mi_new.addActionListener(actions.mi_new);
+        mi_exit.addActionListener(actions.mi_exit);
 
         menu.add(mi_open);
         menu.add(mi_new);
